@@ -16,7 +16,7 @@ const bubbleMaker = () => {
   const plusMinus = Math.random() > 0.5 ? 1 : -1;
   bubble.style.setProperty("--left", Math.random() * 100 * plusMinus + "%");
 
-  const randomColor = [
+  const colorList = [
     "aqua",
     "black",
     "blue",
@@ -27,7 +27,8 @@ const bubbleMaker = () => {
     "red",
     "teal",
     "yellow",
-  ][Math.floor(Math.random() * 10)];
+  ];
+  const randomColor = colorList[Math.floor(Math.random() * colorList.length)];
   bubble.style.setProperty("--background-color", randomColor);
 
   bubble.addEventListener("click", () => {
